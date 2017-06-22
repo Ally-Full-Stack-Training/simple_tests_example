@@ -29,8 +29,10 @@ public class DemoApplicationTests {
 		
 		// fetch it
 		Data found = myDataRepo.findOne(d.getId());
-		
+
+		// we assert that the fetched entity has correct values
 		Assert.assertEquals("Name saved incorrectly", d.getName(), found.getName());
+		Assert.assertEquals("Count saved incorrectly", d.getCount(), found.getCount());
 	}
 
 }
